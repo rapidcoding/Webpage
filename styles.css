@@ -8,7 +8,7 @@ body {
 
 .navbar ul {
     list-style-type: none;
-    background-color: aqua;
+    background-color: rgb(168, 168, 168);
     padding: 0px;
     margin: 0px;
     overflow: hidden;
@@ -41,6 +41,7 @@ header {
 }
 
 .birds {
+    padding: 10px;
     text-align: center;
 }
 
@@ -55,9 +56,20 @@ header {
 }
 
 footer {
-    color: rgb(255, 0, 0);
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.bottom {
+    background-color: grey;
+}
+
+.bottom ul {
+    list-style-type: none;
+}
+
+.bottom a:hover {
+    color: aqua;
 }
