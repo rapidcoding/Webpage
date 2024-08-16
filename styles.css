@@ -4,70 +4,58 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    background-image: url("resources/Hollywood.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .navbar ul {
     list-style-type: none;
-    background-color: rgb(168, 168, 168);
-    padding: 0px;
     margin: 0px;
+    height: 50%;
     overflow: hidden;
 }
 
 .navbar a {
     color: rgb(52, 17, 250);
-    padding: 15px;
     text-decoration: none;
     display: block;
     text-align: center;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    color: #00f7ff;
+    font-size: 40px;
+}
+
 
 .navbar a:hover {
     color: red;
 }
 
 .navbar li {
-    float: left;
-}
-
-header {
-    background-color: rgb(206, 206, 206);
-    padding: 10px;
-}
-
-header {
-    color: rgb(255, 0, 0);
-    text-align: center;
-}
-
-.birds {
-    padding: 10px;
-    text-align: center;
-}
-
-.video {
-    text-align: center;
-}
-
-.Welcome {
-    color: red;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+    margin-right: 10px;
 }
 
 footer {
-    text-align: center;
-    min-height: 100vh;
+    padding: 0px;
+    margin-top: 600px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.bottom {
-    background-color: grey;
-}
+.bottom {}
 
 .bottom ul {
     list-style-type: none;
+    padding: 0px;
 }
 
 .bottom a:hover {
