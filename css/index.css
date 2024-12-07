@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 245, 218);
+    min-height: 100vh;
+}
+
+.headerWhole {
+    background-color: rgb(255, 211, 154);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mainImage {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    white-space: nowrap;
+    font-size: 80px;
+    font-family: fantasy;
+    color: rgb(124, 0, 0);
+    cursor: pointer;
+}
+
+.navbar ul {}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar ul li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navbar ul li a:hover {
+    color: aqua;
+}
+
+/* <600px, 601px, 768px, 992px, 1200px */
+
+@media only screen and (max-width: 600px) {
+
+    .mainContent {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+
+    .mainContent {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    * {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .mainContent {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    .mainContent {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .mainContent {
+        width: 100%;
+    }
+}
