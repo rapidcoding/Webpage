@@ -29,8 +29,8 @@ body {
 
 .logo {
     white-space: nowrap;
-    font-size: 80px;
-    font-family: fantasy;
+    font-size: 60px;
+    font-family: cursive;
     color: rgb(124, 0, 0);
     cursor: pointer;
 }
