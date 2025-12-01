@@ -1,52 +1,47 @@
+/* Resets margins, paddings, borders, and font-size */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
 }
 
+/* Body */
 body {
-    background-color: rgb(255, 249, 233);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #E7DACB;
+    /* soft warm beige for body */
+    color: #3C342C;
+    /* dark brown text */
     min-height: 100vh;
 }
 
+/* Header / Navbar */
 .headerWhole {
-    background-color: rgb(255, 228, 192);
+    background-color: #7F6245;
+    /* darker warm brown for navbar */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.mainImageDiv {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.mainImage {
-    width: 90%;
-}
-
-.mainContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
+/* Logo */
 .logo {
     white-space: nowrap;
-    font-size: 40px;
+    font-size: 26px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(124, 0, 0);
+    color: #F6F2EC;
+    /* muted reddish-brown */
     cursor: pointer;
 }
 
-.navbar ul {}
-
+/* Navbar Links */
 .navbar ul {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     list-style-type: none;
     flex-wrap: wrap;
 }
@@ -57,25 +52,71 @@ body {
 }
 
 .navbar ul li a {
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #F6F2EC;
+    font-weight: 500;
 }
 
 .navbar ul li a:hover {
-    color: aqua;
+    color: #DCC3A5;
 }
 
+/* Main Content */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main Image */
+.mainImageDiv {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+}
+
+.mainImage {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Section Content Styling */
+.section-content {
+    background-color: #F6F2EC;
+    /* light cream for sections */
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    width: 90%;
+}
+
+/* Footer */
 .footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: rgb(255, 243, 174);
-    padding: 20px;
+    background-color: #7F6245;
+    /* same as navbar for flow */
+    padding: 40px 20px;
+    color: #F6F2EC;
+}
+
+.footer div {
+    margin: 10px 0;
 }
 
 .footerName {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Bottom Elements */
 .bottomElements {
     margin-top: 10%;
     display: flex;
@@ -86,36 +127,65 @@ body {
     white-space: pre-wrap;
 }
 
+/* Social Icons */
 .fa {
     padding: 10px;
     text-align: center;
     margin: 5px 2px;
     font-size: 30px;
     width: 50px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .fa-linkedin {
-    background: #007bb5;
+    background: #8CA68C;
+    /* muted sage */
     color: white;
+}
+
+.fa-linkedin:hover {
+    background: #78977F;
 }
 
 .fa-instagram {
-    background: #125688;
+    background: #8CA68C;
     color: white;
 }
 
+.fa-instagram:hover {
+    background: #78977F;
+}
 
-/* <600px, 601px, 768px, 992px, 1200px */
+/* Buttons / Links (optional) */
+.button {
+    background-color: #9C7F60;
+    color: #F6F2EC;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+}
 
+.button:hover {
+    background-color: #7B624A;
+}
+
+/* Responsive Breakpoints */
 @media only screen and (max-width: 600px) {
-
     .mainContent {
         width: 100%;
+    }
+
+    .navbar ul li {
+        padding: 0 10px;
     }
 }
 
 @media only screen and (min-width: 601px) {
-
     .mainContent {
         width: 100%;
         flex-direction: row;
@@ -124,11 +194,9 @@ body {
     .bottomElements {
         flex-direction: row;
     }
-
 }
 
 @media only screen and (min-width: 768px) {
-
     .mainContent {
         width: 100%;
     }
@@ -139,14 +207,12 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
-
     .mainContent {
         width: 100%;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-
     .mainContent {
         width: 100%;
     }

@@ -12,29 +12,47 @@
 
 <body>
     <header class="headerWhole">
-        <div class="logo">Alex Thomas</div>
-        <nav class="navbar">
+        <h1 class="logo">Alex Thomas</h1>
+        <nav class="navbar" aria-label="Main Navigation">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="index">Home</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="projects">Projects</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main class="mainContent">
-        <div class="mainImage">
-            <img src="resources/Alex.png" alt="Pic">
-        </div>
-        <div class="intro">Alex Thomas
-            <p>My name is Alex Thomas. I just graduated Illinois State University with a compter science degree. Welcome
-                to my website.</p>
-        </div>
+        <section class="mainImageDiv">
+            <img src="resources/Alex.png" alt="Portrait of Alex Thomas" class="mainImage">
+        </section>
+
+        <section class="intro section-content">
+            <h2>Alex Thomas</h2>
+            <p>My name is Alex Thomas. I just graduated Illinois State University with a computer science degree.
+                Welcome to my website.</p>
+        </section>
     </main>
 
-
+    <footer class="footer">
+        <div class="footerName">
+            <p>Alex Thomas</p>
+        </div>
+        <div class="pageLinks">
+            <a href="index">Home</a>
+            <a href="about">About</a>
+            <a href="projects">Projects</a>
+            <a href="contact">Contact</a>
+        </div>
+        <div class="socialLinks" aria-label="Social Media Links">
+            <a href="https://www.instagram.com/AlexThomas50" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/alex-thomas-84a37a263" class="fa fa-linkedin" target="_blank"></a>
+        </div>
+        <div class="bottomElements">
+            <p>© Alex Thomas 2025 | All Rights Reserved | <a href="terms">Terms</a> | <a href="privacy">Privacy</a></p>
+        </div>
+    </footer>
 </body>
 
 </html>
