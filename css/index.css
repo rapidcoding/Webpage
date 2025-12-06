@@ -1,7 +1,8 @@
-/* Resets margins, paddings, borders, and font-size */
+/* Global reset of margin, padding, elements, and font */
 * {
     margin: 0;
     padding: 0;
+    /* Padding and border stays inside of element */
     box-sizing: border-box;
     font-size: 100%;
 }
@@ -11,16 +12,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #E7DACB;
-    /* soft warm beige for body */
     color: #3C342C;
-    /* dark brown text */
     min-height: 100vh;
 }
 
 /* Header / Navbar */
 .headerWhole {
     background-color: #7F6245;
-    /* darker warm brown for navbar */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,11 +32,10 @@ body {
     font-size: 26px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #F6F2EC;
-    /* muted reddish-brown */
     cursor: pointer;
 }
 
-/* Navbar Links */
+/* Navbar Items All */
 .navbar ul {
     display: flex;
     justify-content: flex-end;
@@ -46,11 +43,13 @@ body {
     flex-wrap: wrap;
 }
 
+/* Navbar Items Individually */
 .navbar ul li {
     display: inline-block;
     padding: 0px 20px;
 }
 
+/* Navbar Links */
 .navbar ul li a {
     transition: all 0.3s ease;
     text-decoration: none;
@@ -58,17 +57,28 @@ body {
     font-weight: 500;
 }
 
+/* Navbar Links Hovering */
 .navbar ul li a:hover {
     color: #DCC3A5;
 }
 
 /* Main Content */
-.mainContent {
+.myInfo {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
+}
+
+.mainContent section {
+    padding: 0px 20px;
+
+}
+
+.introHome {
+    display: flex;
+    justify-content: right;
 }
 
 /* Main Image */
@@ -78,6 +88,7 @@ body {
     margin: 2% 0;
 }
 
+/* Image of me */
 .mainImage {
     max-width: 300px;
     width: 100%;
@@ -88,7 +99,6 @@ body {
 /* Section Content Styling */
 .section-content {
     background-color: #F6F2EC;
-    /* light cream for sections */
     padding: 25px;
     margin: 15px 0;
     border-radius: 12px;
@@ -157,6 +167,7 @@ body {
     background: #78977F;
 }
 
+
 /* Buttons / Links (optional) */
 .button {
     background-color: #9C7F60;
@@ -172,6 +183,21 @@ body {
 
 .button:hover {
     background-color: #7B624A;
+}
+
+.piano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.piano video {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Breakpoints */
