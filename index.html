@@ -17,7 +17,8 @@
 <body>
     <header class="headerWhole">
         <h1 class="logo">Alex Thomas</h1>
-        <nav class="navbar">
+
+        <nav class="navbar" aria-label="Main Navigation">
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="about">About</a></li>
@@ -26,15 +27,41 @@
             </ul>
         </nav>
 
+        <!-- Hamburger button (shows on mobile) -->
+        <button class="ham-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Off-screen mobile menu -->
+        <nav id="mobileMenu" class="off-screen-menu" aria-label="Mobile Navigation">
+            <button class="menu-close" aria-label="Close menu">&times;</button>
+
+            <a href="/">Home</a>
+            <a href="about">About</a>
+            <a href="projects">Projects</a>
+            <a href="contact">Contact</a>
+        </nav>
+
+        <div class="menu-overlay" aria-hidden="true"></div>
+
+
     </header>
 
+
     <main class="mainContent">
-        <div class="intro">
-            <div class="introHome section-content">
+        <section class="hero">
+            <div class="hero-image">
+                <img src="resources/Alex.png" alt="Portrait of Alex Thomas">
+            </div>
+
+            <div class="hero-text section-content">
                 <h2 id="typedText">&nbsp;</h2>
             </div>
-        </div>
+        </section>
     </main>
+
 
     <footer class="footer">
         <div class="socialLinks" aria-label="Social Media Links">

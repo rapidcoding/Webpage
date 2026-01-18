@@ -186,3 +186,222 @@ body {
         margin-bottom: 20px;
     }
 }
+
+/* Hamburger button */
+.ham-menu {
+    display: none;
+    /* hidden on desktop */
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.ham-menu span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 6px 0;
+    background: #00FFF7;
+    border-radius: 999px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    box-shadow: 0 0 8px rgba(0, 255, 247, 0.35);
+}
+
+/* Animate to X when active */
+.ham-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Off-screen menu panel */
+.off-screen-menu {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background: #1F2233;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.4);
+    padding: 90px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: right 0.25s ease;
+    z-index: 999;
+    /* ← ADD THIS */
+}
+
+
+.off-screen-menu a {
+    color: #E5E7EB;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.off-screen-menu a:hover {
+    color: #0F111A;
+    background: #00FFF7;
+    box-shadow: 0 0 14px rgba(0, 255, 247, 0.35);
+}
+
+/* Active state slides it in */
+.off-screen-menu.active {
+    right: 0;
+}
+
+/* Mobile rules: hide desktop nav, show hamburger */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+
+    .headerWhole {
+        padding: 16px 18px;
+        /* slightly tighter on mobile */
+    }
+}
+
+/* Overlay behind the off-screen menu */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    /* top/right/bottom/left: 0 */
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 998;
+    /* just below the menu (menu is 999) */
+}
+
+/* Show overlay when active */
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Optional: prevent background scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Close (X) button inside mobile menu */
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: #00FFF7;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu-close:hover {
+    color: #00FFD1;
+    transform: rotate(90deg);
+}
+
+#typedText {
+    display: inline-block;
+    line-height: 1.1;
+}
+
+#typedText::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 4px;
+    color: #00FFF7;
+    animation: blink 1s infinite;
+    transform: translateY(-2px);
+}
+
+
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Image container */
+.hero-image img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00FFF7;
+    box-shadow: 0 0 25px rgba(0, 255, 247, 0.5);
+}
+
+
+/* Text block */
+.hero-text {
+    max-width: 1000px;
+    /* wider than section-content */
+    width: 100%;
+}
+
+/* Typed text */
+#typedText {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    white-space: normal;
+    word-break: normal;
+
+    display: inline;
+}
+
+
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+}

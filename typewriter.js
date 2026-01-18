@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const sentences = [
         "Hello there, I'm Alex!",
         "Welcome to my website!",
@@ -23,7 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
             charIndex++;
             setTimeout(typeSentence, typingSpeed);
         } else {
-            // pause at end of sentence
+            // If this is the last sentence, STOP here
+            if (sentenceIndex === sentences.length - 1) {
+                return;
+            }
+            // Otherwise pause, then delete
             setTimeout(deleteSentence, pauseTime);
         }
     }
@@ -34,12 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
             charIndex--;
             setTimeout(deleteSentence, deletingSpeed);
         } else {
-            // move to the next sentence
             sentenceIndex++;
-
-            if (sentenceIndex < sentences.length) {
-                setTimeout(typeSentence, typingSpeed);
-            }
+            setTimeout(typeSentence, typingSpeed);
         }
     }
 
