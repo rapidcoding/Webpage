@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -7,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Alex Thomas</title>
 
-
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="hamburger.js" defer></script>
-
 </head>
 
 <body>
     <header class="headerWhole">
-        <h1 class="logo">Alex Thomas</h1>
+        <a class="logo-link" href="/" aria-label="Go to Home">
+            <span class="logo">Alex Thomas</span>
+        </a>
+
         <nav class="navbar" aria-label="Main Navigation">
             <ul>
                 <li><a href="/">Home</a></li>
@@ -26,7 +26,6 @@
             </ul>
         </nav>
 
-        <!-- If you’re using the hamburger menu on mobile, keep these in your shared header -->
         <button class="ham-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
             <span></span>
             <span></span>
@@ -48,46 +47,53 @@
 
     <main class="mainContent">
         <!-- About / Intro -->
-        <section class="myInfo">
+        <section class="myInfo" aria-label="About Alex">
             <div class="mainImageDiv">
                 <img src="resources/Alex.png" alt="Portrait of Alex Thomas" class="mainImage">
             </div>
 
-            <div class="intro section-content">
+            <div class="section-content">
                 <h2>About Me</h2>
                 <p>
                     My name is Alex Thomas. I graduated from Illinois State University with a Computer Science degree.
                     I currently work at ALDI in their IT Warehouse department.
                 </p>
+                <p>
+                    I enjoy building clean, reliable solutions—especially anything involving automation, dashboards, or
+                    improving workflows.
+                </p>
             </div>
         </section>
 
-        <!-- Piano -->
-        <section class="piano">
+        <!-- Piano (side-by-side like About) -->
+        <section class="pianoRow" aria-label="Piano video">
+            <div class="pianoVideo">
+                <video controls aria-label="Piano performance video">
+                    <source src="resources/Piano.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
             <div class="section-content">
                 <h2>Piano</h2>
-                <p>I enjoy playing the piano. Here’s a clip:</p>
+                <p>I enjoy playing piano in my free time. Here’s a short clip.</p>
             </div>
-
-            <video controls width="600" aria-label="Piano performance video">
-                <source src="resources/Piano.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </section>
+
     </main>
 
     <footer class="footer">
         <div class="socialLinks" aria-label="Social Media Links">
-            <a href="https://www.instagram.com/AlexThomas50" class="fa fa-instagram" target="_blank" rel="noopener"></a>
+            <a href="https://www.instagram.com/AlexThomas50" class="fa fa-instagram" target="_blank" rel="noopener"
+                aria-label="Instagram"></a>
             <a href="https://www.linkedin.com/in/alex-thomas-84a37a263" class="fa fa-linkedin" target="_blank"
-                rel="noopener"></a>
+                rel="noopener" aria-label="LinkedIn"></a>
         </div>
 
         <div class="bottomElements">
             <p>© Alex Thomas 2025 | All Rights Reserved | <a href="terms">Terms</a> | <a href="privacy">Privacy</a></p>
         </div>
     </footer>
-
 </body>
 
 </html>

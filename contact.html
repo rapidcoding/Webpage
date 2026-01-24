@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Alex Thomas</title>
+
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="hamburger.js" defer></script>
@@ -12,7 +13,9 @@
 
 <body>
     <header class="headerWhole">
-        <h1 class="logo">Alex Thomas</h1>
+        <a class="logo-link" href="/" aria-label="Go to Home">
+            <h1 class="logo">Alex Thomas</h1>
+        </a>
 
         <nav class="navbar" aria-label="Main Navigation">
             <ul>
@@ -23,17 +26,14 @@
             </ul>
         </nav>
 
-        <!-- Hamburger button (shows on mobile) -->
         <button class="ham-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <!-- Off-screen mobile menu -->
         <nav id="mobileMenu" class="off-screen-menu" aria-label="Mobile Navigation">
-            <button class="menu-close" aria-label="Close menu">&times;</button>
-
+            <button class="menu-close" aria-label="Close menu" type="button">&times;</button>
             <a href="/">Home</a>
             <a href="about">About</a>
             <a href="projects">Projects</a>
@@ -41,36 +41,77 @@
         </nav>
 
         <div class="menu-overlay" aria-hidden="true"></div>
-
-
     </header>
 
-
     <main class="mainContent">
-        <section class="contactForm section-content">
-            <h2>Contact Me</h2>
-            <form action="submit_form.php" method="post">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <section class="pageHeader">
+            <h2>Contact</h2>
+            <p class="muted">Want to connect? Send me a message or reach me directly.</p>
+        </section>
+
+        <section class="contactLayout">
+            <!-- Card 1: Form -->
+            <div class="section-content">
+                <h3>Send a message</h3>
+
+                <form class="contactForm" action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="What’s on your mind?"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="button">Send</button>
+                </form>
+            </div>
+
+            <!-- Card 2: Direct
+            <div class="section-content">
+                <h3>Reach me</h3>
+
+                <div class="contactLine">
+                    <span class="contactLabel">Email</span>
+                    <a class="contactLink" href="mailto:alexthomas7250@gmail.com">alexthomas7250@gmail.com</a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+
+                <div class="contactLine">
+                    <span class="contactLabel">LinkedIn</span>
+                    <a class="contactLink" href="https://www.linkedin.com/in/alex-thomas-84a37a263" target="_blank"
+                        rel="noopener">
+                        View profile
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                <div class="contactDivider"></div>
+
+                <div class="socialLinks" aria-label="Social Media Links">
+                    <a href="https://www.instagram.com/AlexThomas50" class="fa fa-instagram" target="_blank"
+                        rel="noopener" aria-label="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/alex-thomas-84a37a263" class="fa fa-linkedin" target="_blank"
+                        rel="noopener" aria-label="LinkedIn"></a>
                 </div>
-                <button type="submit" class="button">Send</button>
-            </form>
+
+                <p class="muted small">I usually respond within a day or two.</p>
+            </div>-->
         </section>
     </main>
 
     <footer class="footer">
         <div class="socialLinks" aria-label="Social Media Links">
-            <a href="https://www.instagram.com/AlexThomas50" class="fa fa-instagram" target="_blank"></a>
-            <a href="https://www.linkedin.com/in/alex-thomas-84a37a263" class="fa fa-linkedin" target="_blank"></a>
+            <a href="https://www.instagram.com/AlexThomas50" class="fa fa-instagram" target="_blank" rel="noopener"
+                aria-label="Instagram"></a>
+            <a href="https://www.linkedin.com/in/alex-thomas-84a37a263" class="fa fa-linkedin" target="_blank"
+                rel="noopener" aria-label="LinkedIn"></a>
         </div>
         <div class="bottomElements">
             <p>© Alex Thomas 2025 | All Rights Reserved | <a href="terms">Terms</a> | <a href="privacy">Privacy</a></p>

@@ -12,7 +12,9 @@
 
 <body>
     <header class="headerWhole">
-        <h1 class="logo">Alex Thomas</h1>
+        <a class="logo-link" href="/">
+            <h1 class="logo">Alex Thomas</h1>
+        </a>
 
         <nav class="navbar" aria-label="Main Navigation">
             <ul>
@@ -49,8 +51,32 @@
     <main class="mainContent">
         <section class="section-content">
             <h2>Projects</h2>
-            <p>COMING SOON...</p>
+
+            <div class="project-card">
+                <h3>Camera-Based Calorie Tracking App</h3>
+                <p>
+                    I helped develop a calorie-tracking mobile app for a State Farm mobile app competition. The app used
+                    the phone’s
+                    camera to identify food and estimate calories to make tracking faster and more convenient.
+                </p>
+
+                <ul class="project-bullets">
+                    <li>Built the Android app experience using Kotlin.</li>
+                    <li>Integrated a PyTorch-based model pipeline to classify food from camera input.</li>
+                    <li>Collaborated on the overall feature design and end-to-end workflow for capturing, analyzing, and
+                        logging meals.</li>
+                </ul>
+
+                <p class="project-tech">
+                    <strong>Tech:</strong> Kotlin, Android, PyTorch
+                </p>
+            </div>
+
+            <p style="margin-top: 16px; color: #9CA3AF;">
+                More projects coming soon.
+            </p>
         </section>
+
     </main>
 
     <footer class="footer">
